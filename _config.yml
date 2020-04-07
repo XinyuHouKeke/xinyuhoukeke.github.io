@@ -22,10 +22,26 @@ title: Xinyu's Page
 email: ke137531706@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Xinyu's page~
-baseurl: "xinyuhoukeke.github.io" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# baseurl: "xinyuhoukeke.github.io" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://xinyuhoukeke.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+weibo_username:  2349749074
+#twitter_username: jekyllrb
+github_username:  XinyuHouKeke
+
+# side bar
+#sidebar: true
+#sidebar-about-description: "hello~"
+
+gitalk:
+enable: true
+clientID:  0c76d132ec922014e2bd
+clientSecret:   54d3a1c429d273a1683389c55da75c178db9362b
+repository: xinyuhoukeke.github.io
+owner: XinyuHouKeke
+admin: XinyuHouKeke
+distractionFreeMode: true
 
 # Build settings
 theme: minima
