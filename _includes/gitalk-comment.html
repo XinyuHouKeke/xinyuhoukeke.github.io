@@ -10,8 +10,9 @@
 		repo: 'xinyuhoukeke.github.io',
 		owner: 'XinyuHouKeke',
 		admin: ['XinyuHouKeke'],
-        id: location.pathname.slice(0, 49),
+        id: md5(location.pathname),
     });
+	console.log(gitalk.id);
     gitalk.render('gitalk-container');
 </script> 
 <!-- Gitalk end -->
