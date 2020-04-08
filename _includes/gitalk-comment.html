@@ -1,14 +1,16 @@
 <!-- Gitalk start  -->
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"/></script> 
-<div id="gitalk-container"></div>     <script type="text/javascript">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
     var gitalk = new Gitalk({
-		clientID: `0c76d132ec922014e2bd`,
-		clientSecret: `54d3a1c429d273a1683389c55da75c178db9362b`,
-		repo: `xinyuhoukeke.github.io`,
+		clientID: '0c76d132ec922014e2bd',
+		clientSecret: '54d3a1c429d273a1683389c55da75c178db9362b',
+		repo: 'xinyuhoukeke.github.io',
 		owner: 'XinyuHouKeke',
 		admin: ['XinyuHouKeke'],
-		id: '{{ page.url }}',
+        id: md5(location.pathname),
     });
     gitalk.render('gitalk-container');
 </script> 
