@@ -1,19 +1,15 @@
-<!-- gitalk comment  -->
-{% if site.gitalk.clientID and site.gitalk.clientSecret %}
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script >
-  const gitalk = new Gitalk({
-    clientID: '{{ site.gitalk.clientID }}',
-    clientSecret: "{{ site.gitalk.clientSecret }}",
-    repo: "{{ site.gitalk.repository }}",
-    owner: "{{ site.gitalk.owner }}",
-    admin: ["{{ site.gitalk.admin | split: ','  | join: '","'}}"],
-    id: "{{ page.url }}",    // Ensure uniqueness and length less than 50 
-    distractionFreeMode: false,  // Facebook-like distraction free mode
-    perPage: 50
-});
-gitalk.render('gitalk-container')
-</script>
-{% endif %}
+<!-- Gitalk start  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"/></script> 
+<div id="gitalk-container"></div>     <script type="text/javascript">
+    var gitalk = new Gitalk({
+		clientID: `0c76d132ec922014e2bd`,
+		clientSecret: `54d3a1c429d273a1683389c55da75c178db9362b`,
+		repo: `xinyuhoukeke.github.io`,
+		owner: 'XinyuHouKeke',
+		admin: ['XinyuHouKeke'],
+		id: '{{ page.url }}',
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
