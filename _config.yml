@@ -37,20 +37,6 @@ minima:
   social_links:
     github:  XinyuHouKeke
 
-
-# side bar
-#sidebar: true
-#sidebar-about-description: "hello~"
-
-gitalk:
-  enable: true
-  clientID:  0c76d132ec922014e2bd
-  clientSecret:   54d3a1c429d273a1683389c55da75c178db9362b
-  repository: xinyuhoukeke.github.io
-  owner: XinyuHouKeke
-  admin: XinyuHouKeke
-  distractionFreeMode: true
-
 # Build settings
 theme: minima
 plugins:
