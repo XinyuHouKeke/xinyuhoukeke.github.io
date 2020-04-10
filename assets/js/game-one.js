@@ -1,3 +1,6 @@
+/**
+ * Create by Xinyu Apr 10, 2020
+ */
 var canvas, ctx;
 var maxEdge; //get window size, not the canvas size
 var canvasScale;
