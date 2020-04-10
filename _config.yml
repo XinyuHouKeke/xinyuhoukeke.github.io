@@ -36,6 +36,11 @@ minima:
   # generate social links in footer
   social_links:
     github:  XinyuHouKeke
+    
+collections:
+  my_programs:
+    output: true
+    permalink: /my_programs/:path/
 
 # Build settings
 theme: minima

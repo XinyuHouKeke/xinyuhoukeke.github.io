@@ -1,0 +1,19 @@
+---
+layout: program
+title: "Draw a Flower"
+---
+
+<script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/game-one.js"></script>
+
+<p id="instruction"></p>
+	<p><button type="button" id="resetCanvas" onclick="resetCanvas()">Reset Canvas</button>
+		<button type="button" id="changeColor" onclick="changeColor()">Change Color</button>
+		<div style="display: flex; margin-top: -10px; margin-bottom: -10px;">
+		<p id="toothNumber"></p>
+		<input id="toothSlider" type="range" min="15" max="50" value="15">
+		<p id="toothNumberVal"></p>
+		<button type="button" id="setToothNum" style="margin:10px;" onclick="setToothValue()">Set Tooth Number</button>
+		</div>
+	</p>
+	<canvas id="sketchBoard" width="100" height="100" style="border:1px solid #000000;"> </canvas>
+	<p id="note"></p>
