@@ -1,0 +1,87 @@
+
+<!-- <link rel="stylesheet" href="{{ base.url | prepend: site.url }}../assets/css/img-slideshow.scss" type="text/css"> -->
+<script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/img-slideshow.js"></script>
+
+
+<style>
+* {box-sizing: border-box}
+  .slides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    left: 50%;
+    position: relative;
+  }
+  
+  /* Next & previous buttons */
+.prev-arrow {
+    background-color: rgba(239, 215, 250, 0.6);
+    cursor: pointer;
+    position: absolute;
+    top: -100px;
+    width: auto;
+    padding: 15px;
+    color: rgb(121, 60, 145);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 6px 6px 0;
+    user-select: none;
+    left:-50%
+  }
+  
+ .next-arrow {
+    background-color: rgba(239, 215, 250, 0.6);
+    cursor: pointer;
+    position: absolute;
+    top: -100px;
+    width: auto;
+    padding: 15px;
+    color: rgb(121, 60, 145);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 6px 0 0 6px;
+    user-select: none;
+    right:50%
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev-arrow:hover, .next-arrow:hover {
+    background-color: rgba(179, 222, 247, 0.6);
+  }
+  
+  .number-index {
+    background-color: rgba(239, 215, 250, 0.6);
+    font-size: 16px;
+    padding: 10px 16px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+    /* Caption text */
+  /* .text {
+     color: #f2f2f2;
+     font-size: 15px;
+     padding: 8px 12px;
+     position: absolute;
+     bottom: 8px;
+     width: 100%;
+     text-align: center;
+ } */
+  
+</style>
+
+<!-- body -->
+<!-- edit based on the W3C slideshow tutorial: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow -->
+
+<div class="slideshow-container">
+<a class="prev-arrow" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next-arrow" onclick="plusSlides(1)">&#10095;</a>
+</div>
