@@ -41,6 +41,9 @@ collections:
   my_programs:
     output: true
     permalink: /my_programs/:path/
+  my_life:
+    output: true
+    permalink: /my_life/:path/
 
 # Build settings
 theme: minima
