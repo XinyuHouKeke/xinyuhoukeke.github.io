@@ -16,13 +16,13 @@ class MainGame extends Phaser.Scene{
     }
 
 preload () {
-    this.load.image('background', '{{ base.url | prepend: site.url }}/assets/img/program-two/background.png');
-    this.load.image('food', '{{ base.url | prepend: site.url }}/assets/img/program-two/food.png');
-    this.load.image('fire', '{{ base.url | prepend: site.url }}/assets/img/program-two/fire.png');
-    this.load.image('ground', '{{ base.url | prepend: site.url }}/assets/img/program-two/ground.png');
+    this.load.image('background', '../../assets/img/program-two/background.png');
+    this.load.image('food', '../../assets/img/program-two/food.png');
+    this.load.image('fire', '../../assets/img/program-two/fire.png');
+    this.load.image('ground', '../../assets/img/program-two/ground.png');
 
     this.load.spritesheet('chicken', 
-        '{{ base.url | prepend: site.url }}/assets/img/program-two/chicken.png',
+        '../../assets/img/program-two/chicken.png',
         { frameWidth: 51, frameHeight: 68 }
     );
 }
@@ -151,7 +151,7 @@ class EndScene extends Phaser.Scene {
     preload() { 
         this.load.scenePlugin({
             key: 'rexuiplugin',
-            url: 'phaser-dist/rexuiplugin.min.js',
+            url: '../../assets/js/game-two/phaser-dist/rexuiplugin.min.js',
             sceneKey: 'rexUI'
         });   
     }
