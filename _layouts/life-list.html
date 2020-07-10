@@ -10,9 +10,9 @@ layout: default
   {{ content }}
 
   {% if site.paginate %}
-    {% assign my_life = paginator.my_life %}
+    {% assign my_life = paginator.my_life | sort: 'date' | reverse %}
   {% else %}
-    {% assign my_life = site.my_life %}
+    {% assign my_life = site.my_life | sort: 'date' | reverse %}
   {% endif %}
 
 

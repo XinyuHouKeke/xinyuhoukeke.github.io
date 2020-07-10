@@ -10,9 +10,9 @@ layout: default
   {{ content }}
 
   {% if site.paginate %}
-    {% assign my_programs = paginator.my_programs %}
+    {% assign my_programs = paginator.my_programs | sort: 'date' | reverse %}
   {% else %}
-    {% assign my_programs = site.my_programs %}
+    {% assign my_programs = site.my_programs | sort: 'date' | reverse %}
   {% endif %}
 
   {%- if my_programs.size > 0 -%}
