@@ -3,5 +3,39 @@ layout: page
 title: Feedback
 permalink: /feedback/
 ---
+<!-- https://formspree.io/forms -->
+<!-- https://formspree.io/mbjzpraa -->
 
-Feedback Page
+<h3>Please leave your message below:</h3>
+
+<br>
+
+<form accept-charset="UTF-8" action="https://formspree.io/mbjzpraa" method="POST">
+    <div class="form-group">
+        <label>Your Name (optional):</label>
+        <input class="form-control" id="inputName" placeholder="Enter your name" name="name" type="text"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Your Email (optional): </label>
+        <input class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter contact email" name="_replyto" type="email"/>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Which section will you leave the feedback for:</label>
+      <select class="form-control" name="section" required>
+        <option value="other">Other Comments</option>
+        <option value="mainPage">Main Page</option>
+        <option value="myPrograms">'My Programs'</option>
+        <option value="myLife">'Main Life'</option>
+    </select>
+    </div>
+    <hr>
+    <div class="form-group mt-3">
+        <label>Feedback:</label>
+        <br>
+        <textarea rows="8" cols="80" name="message" required></textarea>
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
