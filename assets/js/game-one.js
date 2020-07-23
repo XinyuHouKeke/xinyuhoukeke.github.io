@@ -33,8 +33,8 @@ var currentX, currentY;
 var toothSlider, outputToothVal, settedToothVal;
 
 window.onload = function windowOnload() {
-  document.getElementById("instruction").innerHTML = "- Start by dargging the white dot which is in the right side of the white gear, and continually dragging it around the outer gear. <br> - Keep your moving mouse always in the inner colorful gear. <br> - If the inner gear does no longer draggable, continue your work by dragging the end point of the white line where you just stopped at.";
-  document.getElementById("note").innerHTML = "Note: <br> - Clike the 'Reset Canvas' button for creating different patterns with different random inner gears. <br> - Click the 'Change Color' button to change the color of the inner gear. <br> - Slide the round button on the slider bar to change outer gear's tooth number, then click 'Set Tooth Number' button to set the new outer gear for creating different patterns." ;
+  document.getElementById("instruction").innerHTML = "- Start by dargging the white dot which is in the right side of the white gear, and continually dragging it around the outer gear. <br> - Keep your moving mouse <b>always in the inner colorful gear</b>. (move slower if it is hard to control) <br> - If the inner gear does no longer draggable, continue your work by dragging the end point of the white line where you just stopped at.";
+  document.getElementById("note").innerHTML = "Have more fun by: <br> - Clike the 'Reset Canvas' button for creating different patterns with different random inner gears. <br> - Click the 'Change Color' button to change the color of the inner gear. <br> - Slide the round button on the slider bar to change outer gear's tooth number, then click 'Set Tooth Number' button to set the new outer gear for creating different patterns." ;
   document.getElementById("resetCanvas").style.color = "purple";
   document.getElementById("resetCanvas").style.padding = "5px 10px";
   document.getElementById("changeColor").style.color = "lightCoral";
