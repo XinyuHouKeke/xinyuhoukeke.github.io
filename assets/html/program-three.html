@@ -1,0 +1,148 @@
+<!-- Create by Xinyu May 24, 2020 -->
+
+<!-- <script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/game-one.js"></script> -->
+
+<script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/program-three.js"></script>
+
+  <style>
+    table {
+        font-size: 14px;
+        width:100%;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    #SDTable tr:nth-child(even) {
+        background-color: #eee;
+    }
+    #SDTable tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    #SDTable th {
+        background-color: rgb(78, 74, 74);
+        color: white;
+    }
+    /* .uneditable {
+        background-color: rgb(172, 168, 168);
+    } */
+    /* Hide arrows in input box */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    /* button style */
+    button {
+        background-color: #493453;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 7px 3px 0px 0px;
+        cursor: pointer;
+} 
+    </style>
+    </head>
+    <body> 
+
+    <form id="SDForm" style="margin: 0px;" onsubmit="return updateTable()">
+    
+    <table id="SDTable">
+        <caption><h2>Smart Dollars Invoice Calculator</h2></caption>
+      <tr>
+        <th>DATE &nbsp<input type="date" id="todayDate"></th>
+        <th>TILLA</th> 
+        <th>TILLB</th>
+        <th>TOTAL</th>
+      </tr>
+      <tr>
+        <td>TODAY'S COINS</td>
+        <td style="padding: 0px"><table><tr style="background-color: #eee"><td style="border: 1px solid black ; border-style: hidden solid hidden hidden">$ <input type="number" id="coinsBox" step=0.01 placeholder="Coins in Box" required/></td><td style="border: 1px solid black ; border-style: hidden solid hidden solid">$ <input type="number" id="drawerA" step=0.01 placeholder="Coins in Drawer A" required/></td><td style="border: 1px solid black ; border-style: hidden hidden hidden solid" class='uneditable' id="tillA">$ 0</td></tr></table></td> 
+        <td>$ <input type="number" id="tillB" step=0.01 placeholder="TillB" required/></td>
+        <td class='uneditable' id="todaysCoinsTotal">$ 0</td>
+      </tr>
+      <tr>
+        <td>EFTPOS</td>
+        <td>$ <input type="number" id="eftposA" step=0.01 placeholder="EFTPOS A" required/></td>
+        <td>$ <input type="number" id="eftposB" step=0.01 placeholder="EFTPOS B" required/></td>
+        <td class='uneditable' id="todaysEftposTotal">$ 0</td>
+      </tr>
+      <tr>
+        <td>BANK DEPOSIT</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>NOTE</td>
+        <td>$ <input type="number" id="noteA" step=0.01 placeholder="NOTE A" required/></td>
+        <td>$ <input type="number" id="noteB" step=0.01 placeholder="NOTE B" required/></td>
+        <td class='uneditable' id="todaysNoteTotal">$ 0</td>
+      </tr>
+      <tr>
+        <td>PAYMENT</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>YESTERDAY'S COIN</td>
+        <td>$ <input type="number" id="yesterdayA" step=0.01 placeholder="could be empty"/></td>
+        <td>$ <input type="number" id="yesterdayB" step=0.01 placeholder="could be empty"/></td>
+        <td>$ <input type="number" id="yesterdayTotal" step=0.01 placeholder="required" required/></td>
+      </tr>
+      <tr>
+        <td>TOTAL</td>
+        <td></td>
+        <td></td>
+        <td>$ <input type="number" id="dailySalesTotal" step=0.01 placeholder="from daily sales" required/></td>
+      </tr>
+      <tr>
+        <td>CASH UP TOTAL</td>
+        <td></td>
+        <td></td>
+        <td class='uneditable' id="cashUpTotal">$ 0</td>
+      </tr>
+      <tr>
+        <td>DIFFERENCE</td>
+        <td></td>
+        <td></td>
+        <td class='uneditable' id="difference">$ 0</td>
+      </tr>
+      <tr>
+        <td>REASON</td>
+        <td><textarea type="text" id="reason" placeholder="could be empty"></textarea></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CASHIER SIGN</td>
+        <td><textarea type="text" id="cashier" placeholder="could be empty"></textarea></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>REMARKS</td>
+        <td><textarea type="text" id="remarks1" rows="3" placeholder="could be empty"></textarea></td>
+        <td><textarea type="text" id="remarks2" rows="3" placeholder="could be empty"></textarea></td>
+        <td><textarea type="text" id="remarks3" rows="3" placeholder="could be empty"></textarea></td>
+      </tr>
+    </table>
+
+    <button type="submit">Update Table</button>
+    <button type="button" onclick="resetValues()">Reset Values</button>
+
+</form>
+
+<p id="note">Note: input after "$" can only be number! (maximum two decimal places)</p>
